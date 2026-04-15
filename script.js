@@ -4,3 +4,39 @@ function whatsapp(){
     "_blank"
   );
 }
+
+
+const carrossel = document.querySelector('.carrossel');
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+carrossel.addEventListener('mousedown', (e) => {
+  isDown = true;
+  carrossel.classList.add('dragging');
+
+  startX = e.pageX - carrossel.offsetLeft;
+  scrollLeft = carrossel.scrollLeft;
+});
+
+carrossel.addEventListener('mouseleave', () => {
+  isDown = false;
+  carrossel.classList.remove('dragging');
+});
+
+carrossel.addEventListener('mouseup', () => {
+  isDown = false;
+  carrossel.classList.remove('dragging');
+});
+
+carrossel.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+
+  e.preventDefault(); // evita seleção de texto
+
+  const x = e.pageX - carrossel.offsetLeft;
+  const walk = (x - startX) * 1.5; // velocidade (ajusta aqui)
+
+  carrossel.scrollLeft = scrollLeft - walk;
+});

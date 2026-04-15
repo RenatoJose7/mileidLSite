@@ -8,7 +8,7 @@
 body{
   background: #f5f5f5;
 }
-.html{
+html{
     scroll-behavior: smooth;
 }
 /* HEADER */
@@ -22,7 +22,7 @@ header{
 
   background: linear-gradient(270deg, #d8a7b1, #5ba89b);
   background-size: 400% 400%;
-  animation: gradientMove 8s ease infinite;
+  animation: gradientMove 5s ease infinite;
 }
 
 /* 🔥 container centralizado */
@@ -116,4 +116,136 @@ header button:hover{
 
 .hero-text button:hover{
   transform: scale(1.05);
+}
+
+.problemas{
+  padding: 80px 60px;
+  background: #f3f3f3;
+}
+
+.problemas h2{
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 28px;
+  color: #7a4c58;
+}
+
+/* 🔥 CARROSSEL */
+.carrossel{
+  display: flex;
+  gap: 25px;
+
+  overflow-x: auto;
+  scroll-behavior: smooth;
+
+  padding: 20px 0 20px 80px; /* só esquerda */
+}
+
+/* remove barra feia */
+.carrossel::-webkit-scrollbar{
+  display: none;
+}
+
+/* CARD */
+.card{
+  min-width: 220px;
+  height: 450px;
+
+  
+  border-radius: 20px;
+
+  overflow: hidden;
+  flex-shrink: 0;
+
+  position: relative;
+  cursor: grab;
+  transition: 0.3s;
+}
+
+.card:hover{
+  transform: translateY(-5px);
+}
+
+/* IMAGEM */
+.card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 32px;
+}
+
+/* TEXTO EM CIMA DA IMAGEM */
+.card p{
+  position: absolute;
+  bottom: 0;
+  font-weight: 600;
+  width: 85%;
+  padding: 15px;
+  margin: 24px;
+  font-size: 24px;
+  color: #5c3b44;
+  letter-spacing: -1px;
+  
+}
+
+
+@media (max-width: 768px){
+
+  .hero{
+    flex-direction: column;
+    padding: 100px 20px;
+    text-align: center;
+  }
+
+  .hero-text{
+    width: 100%;
+  }
+
+  .hero-text h1{
+    font-size: 28px;
+  }
+
+  .hero-text p{
+    font-size: 14px;
+  }
+
+}
+
+
+@media (max-width: 768px){
+
+  nav{
+    display: none; /* depois você pode fazer menu hamburguer */
+  }
+
+  header{
+    padding: 0 20px;
+  }
+
+  .logo img{
+    width: 35px;
+  }
+
+}
+
+@media (max-width: 768px){
+
+  .carrossel{
+    padding-left: 20px;
+    gap: 15px;
+  }
+
+  .card{
+    min-width: 180px;
+    height: 240px;
+  }
+
+}
+
+@media (max-width: 768px){
+
+  h2{
+    font-size: 22px;
+  }
+
 }
