@@ -1,0 +1,119 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}   
+
+body{
+  background: #f5f5f5;
+}
+.html{
+    scroll-behavior: smooth;
+}
+/* HEADER */
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+
+  z-index: 1000;
+
+  background: linear-gradient(270deg, #d8a7b1, #5ba89b);
+  background-size: 400% 400%;
+  animation: gradientMove 8s ease infinite;
+}
+
+/* 🔥 container centralizado */
+.container-header{
+  max-width: 1200px;
+  margin: 0 auto;
+
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 0px;
+}
+
+/* animação */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.logo img{
+  width: 65px; /* ajusta aqui se quiser menor */
+  height: auto;
+  margin-top: 10px;
+}
+nav a{
+  margin: 0 12px;
+  font-weight: 500;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.568);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+nav a:hover{
+    color: white;
+}
+header button{
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+header button:hover{
+  background: white;
+  color: black;
+}
+
+/* HERO */
+.hero{
+  height: 100vh;
+  padding: 120px 80px;
+
+  display: flex;
+  align-items: center;
+
+  background: url('img/hero.png');
+  margin-top: 20px;
+  background-size: cover;
+}
+.hero-text{
+  width: 50%;
+}
+
+.hero-text h1{
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.hero-text p{
+  color: #444;
+  margin-bottom: 20px;
+}
+.hero-text button{
+  padding: 12px 24px;
+  border-radius: 20px;
+  border: none;
+  background: #b67b8d;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-text button:hover{
+  transform: scale(1.05);
+}
