@@ -1,214 +1,674 @@
-/* 
-   ARQUIVO DE RESPONSIVIDADE COMPLEMENTAR
-   Este arquivo contém as Media Queries para tornar o site responsivo
-   sem alterar o HTML ou o style.css original.
-*/
+/* RESPONSIVO SEM ALTERAR O HTML */
 
-/* --- DISPOSITIVOS MÓVEIS (ATÉ 768px) --- */
-@media (max-width: 768px) {
-    
-    /* GERAL */
-    .container {
-        padding: 0 16px;
-    }
-
-    /* HEADER */
-    header {
-        height: auto;
-        padding: 10px 0;
-    }
-
-    .container-header {
-        flex-direction: column;
-        gap: 10px;
-        padding: 0 16px;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
-    }
-
-    nav a {
-        margin: 0 6px;
-        font-size: 14px;
-    }
-
-    header button {
-        display: none; /* Esconde o botão do header no mobile para economizar espaço, ou pode mantê-lo menor */
-    }
-
-    /* HERO */
-    .hero {
-        padding: 160px 20px 60px;
-        flex-direction: column;
-        text-align: center;
-        background-position: top center;
-        min-height: auto;
-    }
-
-    .hero-text {
-        width: 100%;
-    }
-
-    .hero-text h1 {
-        font-size: 32px;
-    }
-
-    .hero-text p {
-        font-size: 16px;
-        margin: 0 auto 24px;
-    }
-
-    /* PROBLEMAS */
-    .problemas h2 {
-        margin-left: 20px;
-        font-size: 26px;
-        text-align: center;
-        margin-right: 20px;
-    }
-
-    .carrossel {
-        padding: 20px 16px;
-        gap: 15px;
-    }
-
-    .card {
-        min-width: 260px;
-        height: 380px;
-    }
-
-    .card p {
-        font-size: 20px;
-        margin: 16px;
-    }
-
-    /* PESO EMOCIONAL */
-    .title, .cta {
-        margin-left: 20px;
-        margin-right: 20px;
-        text-align: center;
-        font-size: 26px;
-    }
-
-    .cardCulpa p, .cardAnsiedade p {
-        font-size: 22px;
-    }
-
-    /* COMO FUNCIONA TEXTO */
-    .como-funciona-texto {
-        padding: 60px 0;
-    }
-
-    .como-funciona-texto .container {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .texto-box h2 {
-        font-size: 32px;
-        text-align: center;
-    }
-
-    .texto-box p {
-        text-align: left;
-    }
-
-    .imagem-box img {
-        max-width: 100%;
-    }
-
-    /* PASSOS */
-    .passos h2 {
-        font-size: 32px;
-    }
-
-    .passos-grid {
-        grid-template-columns: 1fr; /* Coluna única no mobile */
-        gap: 40px;
-    }
-
-    /* PARA QUEM */
-    .para-quem h2 {
-        font-size: 32px;
-    }
-
-    .lista-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* DIFERENCIAIS */
-    .diferenciais-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* SOBRE MIM */
-    .sobre-mim {
-        padding: 60px 0;
-    }
-
-    .sobre-grid {
-        flex-direction: column-reverse; /* Imagem em cima do texto no mobile */
-        gap: 30px;
-    }
-
-    .sobre-texto h2 {
-        font-size: 32px;
-        text-align: center;
-    }
-
-    .sobre-texto p {
-        margin-right: 0;
-        text-align: left;
-    }
-
-    /* ATENDIMENTO */
-    .atendimento h2 {
-        font-size: 32px;
-    }
-
-    .atendimento-box {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* CTA FINAL */
-    .cta-box h2 {
-        font-size: 30px;
-    }
-
-    /* FAQ */
-    .faq h2 {
-        font-size: 32px;
-    }
-
-    /* WHATSAPP FLOAT */
-    .whatsapp-float {
-        width: 55px;
-        height: 55px;
-        bottom: 20px;
-        right: 20px;
-    }
+/* segurança contra rolagem horizontal */
+html,
+body{
+  overflow-x: hidden;
+  width: 100%;
 }
 
-/* --- AJUSTES PARA TELAS MUITO PEQUENAS (ATÉ 480px) --- */
-@media (max-width: 480px) {
-    .hero-text h1 {
-        font-size: 28px;
-    }
+img{
+  max-width: 100%;
+  height: auto;
+}
 
-    .card {
-        min-width: 85vw; /* Card ocupa quase a largura toda */
-    }
+/* ---------- TABLET ---------- */
+@media (max-width: 1024px){
+  .container{
+    padding: 0 20px;
+  }
 
-    .cardCulpa p {
-        left: 85%;
-        font-size: 18px;
-    }
+  .container-header{
+    padding: 0 20px;
+    gap: 16px;
+  }
 
-    .cardAnsiedade p {
-        left: 25%;
-        font-size: 18px;
-    }
+  nav a{
+    margin: 0 8px;
+    font-size: 14px;
+  }
+
+  header button{
+    padding: 9px 16px;
+    font-size: 14px;
+  }
+
+  .hero{
+    padding: 130px 40px 70px;
+    min-height: auto;
+  }
+
+  .hero-text{
+    width: 58%;
+  }
+
+  .hero-text h1{
+    font-size: 36px;
+  }
+
+  .hero-text p{
+    font-size: 17px;
+  }
+
+  .problemas h2,
+  .title,
+  .cta{
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .title{
+    text-align: center;
+  }
+
+  .cta{
+    text-align: center;
+  }
+
+  .carrossel{
+    padding: 20px 20px 20px 50px;
+  }
+
+  .card{
+    min-width: 210px;
+    height: 400px;
+  }
+
+  .card p{
+    font-size: 20px;
+    margin: 18px;
+  }
+
+  .como-funciona-texto .container{
+    gap: 30px;
+  }
+
+  .texto-box h2,
+  .sobre-texto h2,
+  .para-quem h2,
+  .faq h2,
+  .cta-box h2{
+    font-size: 36px;
+  }
+
+  .transformacao h2,
+  .diferenciais h2{
+    font-size: 42px;
+  }
+
+  .passos h2{
+    font-size: 38px;
+  }
+
+  .passos-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .diferenciais-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lista-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sobre-grid{
+    gap: 30px;
+  }
+
+  .sobre-texto p{
+    margin-right: 0;
+  }
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px){
+  .container{
+    padding: 0 16px;
+  }
+
+  header{
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .container-header{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 0 16px;
+  }
+
+  .logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo img{
+    width: 52px;
+    margin-top: 0;
+  }
+
+  nav{
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 4px;
+  }
+
+  nav a{
+    margin: 0 6px;
+    font-size: 14px;
+  }
+
+  header button{
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .hero{
+    padding: 170px 16px 60px;
+    flex-direction: column;
+    text-align: center;
+    min-height: auto;
+    margin-top: 0;
+    background-position: center;
+  }
+
+  .hero-text{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-text h1{
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .hero-text p{
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .hero-text button{
+    padding: 12px 22px;
+    font-size: 14px;
+  }
+
+  .problemas,
+  .como-funciona-texto,
+  .transformacao,
+  .passos,
+  .para-quem,
+  .diferenciais,
+  .sobre-mim,
+  .atendimento,
+  .cta-final,
+  .faq{
+    padding: 60px 0;
+  }
+
+  .problemas h2,
+  .title,
+  .cta{
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+    font-size: 26px;
+  }
+
+  .problemas-wrapper{
+    width: 100%;
+  }
+
+  .carrossel{
+    padding: 16px 16px 16px 16px;
+    gap: 14px;
+  }
+
+  .card{
+    min-width: 190px;
+    height: 320px;
+  }
+
+  .card img{
+    border-radius: 24px;
+  }
+
+  .card p{
+    width: calc(100% - 24px);
+    margin: 12px;
+    padding: 8px;
+    font-size: 16px;
+    line-height: 1.1;
+  }
+
+  .carrossel-btn{
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+  }
+
+  .carrossel-btn-esquerda{
+    left: 6px;
+  }
+
+  .carrossel-btn-direita{
+    right: 6px;
+  }
+
+  .cardCulpa,
+  .cardAnsiedade,
+  .cardFuturo,
+  .cardCansaco{
+    margin: 18px auto;
+    width: 100%;
+  }
+
+  .cardimg{
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .cardimg img{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .cardCulpa p,
+  .cardAnsiedade p{
+    position: static;
+    transform: none;
+    margin-top: 12px;
+    text-align: center;
+    font-size: 22px;
+    color: #7a4c58;
+  }
+
+  .como-funciona-texto .container,
+  .sobre-grid{
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .texto-box,
+  .imagem-box,
+  .sobre-texto,
+  .sobre-imagem{
+    width: 100%;
+    flex: none;
+  }
+
+  .texto-box h2,
+  .sobre-texto h2,
+  .para-quem h2,
+  .passos h2,
+  .faq h2,
+  .cta-box h2,
+  .atendimento h2{
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .transformacao h2,
+  .diferenciais h2{
+    font-size: 34px;
+  }
+
+  .texto-box p,
+  .sobre-texto p,
+  .atendimento p,
+  .cta-box p,
+  .subtitulo-secao,
+  .faq-resposta p{
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .sobre-texto p{
+    margin-right: 0;
+  }
+
+  .imagem-box img,
+  .sobre-imagem img{
+    max-width: 100%;
+    border-radius: 22px;
+  }
+
+  .transformacao::before,
+  .transformacao::after,
+  .diferenciais::before,
+  .diferenciais::after{
+    opacity: 0.35;
+  }
+
+  .transformacao-grid{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .transformacao-card{
+    max-width: 100%;
+  }
+
+  .transformacao-imagem{
+    height: 180px;
+  }
+
+  .transformacao-conteudo h3{
+    font-size: 24px;
+  }
+
+  .transformacao-conteudo p{
+    font-size: 17px;
+  }
+
+  .passos-grid{
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .passo{
+    padding: 10px 6px;
+  }
+
+  .numero{
+    width: 72px;
+    height: 72px;
+    font-size: 30px;
+  }
+
+  .textoVermelho,
+  .textoVerde{
+    font-size: 18px;
+  }
+
+  .passo p{
+    font-size: 15px;
+  }
+
+  .lista-grid,
+  .diferenciais-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .item-lista,
+  .diferencial-card{
+    font-size: 16px;
+    padding: 18px 18px;
+  }
+
+  .atendimento .container{
+    max-width: 100%;
+  }
+
+  .atendimento-box{
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .atendimento-item{
+    width: 100%;
+    max-width: 320px;
+    min-width: 0;
+  }
+
+  .cta-box button{
+    width: 100%;
+    max-width: 320px;
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+
+  .faq-lista{
+    max-width: 100%;
+  }
+
+  .faq-pergunta{
+    font-size: 16px;
+    padding: 16px 18px;
+  }
+
+  .faq-resposta p{
+    padding: 0 18px 18px;
+    font-size: 15px;
+  }
+
+  .whatsapp-float{
+    width: 56px;
+    height: 56px;
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .whatsapp-float img{
+    width: 28px;
+    height: 28px;
+  }
+
+  footer p{
+    font-size: 13px;
+    text-align: center;
+  }
+}
+
+/* ---------- MOBILE PEQUENO ---------- */
+@media (max-width: 480px){
+  .container{
+    padding: 0 12px;
+  }
+
+  .container-header{
+    padding: 0 12px;
+  }
+
+  nav a{
+    font-size: 13px;
+    margin: 0 4px;
+  }
+
+  header button{
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .hero{
+    padding-top: 180px;
+  }
+
+  .hero-text h1{
+    font-size: 24px;
+  }
+
+  .hero-text p{
+    font-size: 15px;
+  }
+
+  .problemas h2,
+  .title,
+  .cta{
+    font-size: 22px;
+  }
+
+  .card{
+    min-width: 165px;
+    height: 280px;
+  }
+
+  .card p{
+    font-size: 14px;
+  }
+
+  .texto-box h2,
+  .sobre-texto h2,
+  .para-quem h2,
+  .passos h2,
+  .faq h2,
+  .cta-box h2,
+  .atendimento h2,
+  .transformacao h2,
+  .diferenciais h2{
+    font-size: 26px;
+  }
+
+  .transformacao-imagem{
+    height: 150px;
+  }
+
+  .transformacao-conteudo h3{
+    font-size: 22px;
+  }
+
+  .transformacao-conteudo p,
+  .texto-box p,
+  .sobre-texto p,
+  .atendimento p,
+  .subtitulo-secao,
+  .item-lista,
+  .diferencial-card{
+    font-size: 15px;
+  }
+
+  .numero{
+    width: 64px;
+    height: 64px;
+    font-size: 26px;
+  }
+
+  .faq-pergunta{
+    font-size: 15px;
+  }
+
+  .faq-resposta p{
+    font-size: 14px;
+  }
+}
+/* PESO EMOCIONAL - TABLET E MOBILE */
+@media (max-width: 1024px){
+  .peso{
+    padding: 70px 20px;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .title{
+    margin: 0 0 30px 0;
+    text-align: center;
+    font-size: 32px;
+    line-height: 1.15;
+  }
+
+  .cta{
+    margin: 30px 0 0 0;
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.15;
+  }
+
+  .cardCulpa,
+  .cardAnsiedade,
+  .cardFuturo,
+  .cardCansaco{
+    width: 100%;
+    margin: 18px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cardimg{
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .cardimg img{
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 22px;
+    display: block;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.14);
+  }
+
+  .cardCulpa p,
+  .cardAnsiedade p{
+    position: static;
+    transform: none;
+    left: auto;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 28px;
+    line-height: 1.1;
+    color: #7a4c58;
+  }
+}
+
+@media (max-width: 768px){
+  .peso{
+    padding: 60px 16px;
+  }
+
+  .title{
+    font-size: 26px;
+    margin-bottom: 26px;
+  }
+
+  .cta{
+    font-size: 24px;
+    margin-top: 26px;
+  }
+
+  .cardCulpa,
+  .cardAnsiedade,
+  .cardFuturo,
+  .cardCansaco{
+    margin: 16px 0;
+  }
+
+  .cardimg{
+    max-width: 100%;
+  }
+
+  .cardimg img{
+    width: 100%;
+    height: 120px;
+    border-radius: 18px;
+  }
+
+  .cardCulpa p,
+  .cardAnsiedade p{
+    font-size: 22px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px){
+  .peso{
+    padding: 50px 12px;
+  }
+
+  .title{
+    font-size: 22px;
+  }
+
+  .cta{
+    font-size: 20px;
+  }
+
+  .cardimg img{
+    height: 96px;
+    border-radius: 14px;
+  }
+
+  .cardCulpa p,
+  .cardAnsiedade p{
+    font-size: 18px;
+  }
 }
