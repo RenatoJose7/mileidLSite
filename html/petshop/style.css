@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  border: 0;
+}
+
+/* .cabecalho {
+  position: relative;
+  height: 600px;
+  background: url("https://wallpapercat.com/w/full/c/8/c/734402-3840x2160-desktop-4k-hayao-miyazaki-background-image.jpg") center / cover no-repeat;
+  color: rgb(0, 0, 0);
+} */
+
+.topo {
+  background: rgba(255, 255, 255, 0.699);
+  display: flex;
+  align-items: center;
+  padding-top: -10px;
+  text-align: center;
+  justify-content: space-around;
+  justify-items: center;
+  text-align: center;
+  box-shadow: 15px 10px 30px rgb(151, 151, 151);
+}
+
+.logoArea {
+  display: flex;
+  align-items: left;
+
+}
+
+.logoArea img {
+  height: 150px;
+   align-items: left;
+   margin-right: 400px;
+}
+
+.menu a {
+  color: rgb(126, 0, 0);
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  font-size: 16px;
+  justify-content: space-around;
+  justify-items: center;
+  text-align: center;
+  border-radius: 30px;
+  padding: 8px 16px;
+  box-shadow: 15px 10px 30px rgb(151, 151, 151);
+  transform: scale(2.1);
+  transition: transform 0.3s ease-in;
+
+}
+
+.menu a:hover {
+  color:darkgreen;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  transform: scale(2.1);
+  transition: 0.5s ease-in;
+}
+
+.menu {
+   justify-content: space-around;
+  justify-items: center;
+  text-align: center;
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in;
+}

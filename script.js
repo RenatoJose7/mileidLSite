@@ -38,3 +38,19 @@ if (carrossel) {
     carrossel.scrollLeft = scrollLeft - walk;
   });
 }
+
+function moverCarrossel(direcao) {
+  const carrossel = document.getElementById("carrosselProblemas");
+  const card = carrossel.querySelector(".card");
+
+  if (!carrossel || !card) return;
+
+  const estilo = window.getComputedStyle(carrossel);
+  const gap = parseInt(estilo.columnGap || estilo.gap || 25);
+  const distancia = card.offsetWidth + gap;
+
+  carrossel.scrollBy({
+    left: distancia * direcao,
+    behavior: "smooth"
+  });
+}

@@ -1,0 +1,214 @@
+/* 
+   ARQUIVO DE RESPONSIVIDADE COMPLEMENTAR
+   Este arquivo contém as Media Queries para tornar o site responsivo
+   sem alterar o HTML ou o style.css original.
+*/
+
+/* --- DISPOSITIVOS MÓVEIS (ATÉ 768px) --- */
+@media (max-width: 768px) {
+    
+    /* GERAL */
+    .container {
+        padding: 0 16px;
+    }
+
+    /* HEADER */
+    header {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .container-header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 16px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    nav a {
+        margin: 0 6px;
+        font-size: 14px;
+    }
+
+    header button {
+        display: none; /* Esconde o botão do header no mobile para economizar espaço, ou pode mantê-lo menor */
+    }
+
+    /* HERO */
+    .hero {
+        padding: 160px 20px 60px;
+        flex-direction: column;
+        text-align: center;
+        background-position: top center;
+        min-height: auto;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+        margin: 0 auto 24px;
+    }
+
+    /* PROBLEMAS */
+    .problemas h2 {
+        margin-left: 20px;
+        font-size: 26px;
+        text-align: center;
+        margin-right: 20px;
+    }
+
+    .carrossel {
+        padding: 20px 16px;
+        gap: 15px;
+    }
+
+    .card {
+        min-width: 260px;
+        height: 380px;
+    }
+
+    .card p {
+        font-size: 20px;
+        margin: 16px;
+    }
+
+    /* PESO EMOCIONAL */
+    .title, .cta {
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: center;
+        font-size: 26px;
+    }
+
+    .cardCulpa p, .cardAnsiedade p {
+        font-size: 22px;
+    }
+
+    /* COMO FUNCIONA TEXTO */
+    .como-funciona-texto {
+        padding: 60px 0;
+    }
+
+    .como-funciona-texto .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .texto-box h2 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .texto-box p {
+        text-align: left;
+    }
+
+    .imagem-box img {
+        max-width: 100%;
+    }
+
+    /* PASSOS */
+    .passos h2 {
+        font-size: 32px;
+    }
+
+    .passos-grid {
+        grid-template-columns: 1fr; /* Coluna única no mobile */
+        gap: 40px;
+    }
+
+    /* PARA QUEM */
+    .para-quem h2 {
+        font-size: 32px;
+    }
+
+    .lista-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* DIFERENCIAIS */
+    .diferenciais-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* SOBRE MIM */
+    .sobre-mim {
+        padding: 60px 0;
+    }
+
+    .sobre-grid {
+        flex-direction: column-reverse; /* Imagem em cima do texto no mobile */
+        gap: 30px;
+    }
+
+    .sobre-texto h2 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .sobre-texto p {
+        margin-right: 0;
+        text-align: left;
+    }
+
+    /* ATENDIMENTO */
+    .atendimento h2 {
+        font-size: 32px;
+    }
+
+    .atendimento-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* CTA FINAL */
+    .cta-box h2 {
+        font-size: 30px;
+    }
+
+    /* FAQ */
+    .faq h2 {
+        font-size: 32px;
+    }
+
+    /* WHATSAPP FLOAT */
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* --- AJUSTES PARA TELAS MUITO PEQUENAS (ATÉ 480px) --- */
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .card {
+        min-width: 85vw; /* Card ocupa quase a largura toda */
+    }
+
+    .cardCulpa p {
+        left: 85%;
+        font-size: 18px;
+    }
+
+    .cardAnsiedade p {
+        left: 25%;
+        font-size: 18px;
+    }
+}

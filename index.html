@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mileid Lacerda Psicopedagoga</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
   <link rel="icon" href="img/android-chrome-192x192.png" sizes="192x192">
   <link rel="icon" href="img/android-chrome-512x512.png" sizes="512x512">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -46,42 +47,76 @@
 <section class="problemas" id="problema">
   <h2>Você está passando por isso?</h2>
 
-  <div class="carrossel">
-    <div class="card">
-      <img src="img/dor1.png" alt="">
-      <p>Seu filho não aprende como deveria</p>
+  <div class="problemas-wrapper">
+    <button class="carrossel-btn carrossel-btn-esquerda" onclick="moverCarrossel(-1)" aria-label="Voltar">
+      &#10094;
+    </button>
+
+    <div class="carrossel" id="carrosselProblemas">
+      <div class="card">
+        <img src="img/dor1.png" alt="">
+        <p>Seu filho não aprende como deveria</p>
+      </div>
+      <div class="card">
+        <img src="img/dor2.png" alt="">
+        <p>Tem dificuldade na leitura ou escrita</p>
+      </div>
+      <div class="card">
+        <img src="img/dor3.png" alt="">
+        <p>Não consegue manter a atenção</p>
+      </div>
+      <div class="card">
+        <img src="img/dor4.png" alt="">
+        <p>A escola já sinalizou dificuldades</p>
+      </div>
+      <div class="card">
+        <img src="img/dor5.png" alt="">
+        <p>Parece estar ficando para trás</p>
+      </div>
     </div>
-    <div class="card">
-      <img src="img/dor2.png" alt="">
-      <p>Tem dificuldade na leitura ou escrita</p>
-    </div>
-    <div class="card">
-      <img src="img/dor3.png" alt="">
-      <p>Não consegue manter a atenção</p>
-    </div>
-    <div class="card">
-      <img src="img/dor4.png" alt="">
-      <p>A escola já sinalizou dificuldades</p>
-    </div>
-    <div class="card">
-      <img src="img/dor5.png" alt="">
-      <p>Parece estar ficando para trás</p>
-    </div>
+
+    <button class="carrossel-btn carrossel-btn-direita" onclick="moverCarrossel(1)" aria-label="Avançar">
+      &#10095;
+    </button>
   </div>
 </section>
 
 
-  <div class="container">
-    <div class="section">
-      <div class="item" style="background-color: rgba(198, 89, 96, 0.8);">Culpa</div>
-      <div class="item" style="background-color: rgba(79, 173, 224, 0.8);">Ansiedade</div>
-      <div class="item" style="background-color: rgba(204, 148, 50, 0.8);">Medo do futuro</div>
-      <div class="item" style="background-color: rgba(93, 114, 133, 0.8);">Cansaço</div>
-    </div>
+ <div class="peso">
 
-    <p class="cta">Você não precisa passar por isso sozinho(a).</p>
+    <h2 class="title">Junto, vem um peso emocional</h2>
+
+      <div class="cardCulpa">
+        <div class="cardimg">
+          <img src="img/imagemCulpa.png" alt="">
+          <p>Culpa</p>
+        </div>
+      </div>
+      
+      <div class="cardAnsiedade">
+        <div class="cardimg">
+          <img src="img/imagemAnsiedade.png" alt="">
+          <p>Ansiedade</p>
+        </div>
+      </div>
+
+      <div class="cardCulpa">
+        <div class="cardimg">
+          <img src="img/imagemMedoFuturo.png" alt="">
+          <p>Medo do futuro</p>
+        </div>
+      </div>
+
+      <div class="cardAnsiedade">
+        <div class="cardimg">
+          <img src="img/imagemCansaço.png" alt="">
+          <p>Cansaço</p>        
+        </div>
+      </div>
+
+    <h2 class="cta">Você não precisa passar por isso sozinho(a).</h2>
+    
   </div>
-
 
 
 <section class="como-funciona-texto">
@@ -99,7 +134,7 @@
     </div>
 
     <div class="imagem-box">
-      <img src="img/como-funciona.png" alt="Atendimento psicopedagógico">
+      <img src="img/imgProfessora.png" alt="Atendimento psicopedagógico">
     </div>
   </div>
 </section>
@@ -107,14 +142,34 @@
 <section class="transformacao">
   <div class="container">
     <h2>Transformação</h2>
+
     <div class="transformacao-grid">
-      <div class="transformacao-item">
-        <h3>Para Crianças</h3>
-        <p>Melhora na leitura e escrita, com foco na atenção e organização, garantindo mais confiança e evolução no aprendizado.</p>
+      <div class="transformacao-card">
+        <div class="transformacao-imagem">
+          <img src="img/crianca.png" alt="Criança sorrindo">
+        </div>
+
+        <div class="transformacao-conteudo">
+          <h3>Para Crianças</h3>
+          <p>
+            Melhora na leitura e escrita mais foco e atenção organização nas tarefas
+            mais confiança e evolução no aprendizado
+          </p>
+        </div>
       </div>
-      <div class="transformacao-item">
-        <h3>Para os Pais</h3>
-        <p>Passa a entender o que está acontecendo, sente mais segurança, e aprende como ajudar seu filho a evoluir com mais tranquilidade.</p>
+
+      <div class="transformacao-card">
+        <div class="transformacao-imagem">
+          <img src="img/mae.png" alt="Mãe com criança sorrindo">
+        </div>
+
+        <div class="transformacao-conteudo">
+          <h3>Para a mãe</h3>
+          <p>
+            Passa a entender o que está acontecendo se sente mais segura para de se
+            culpar aprende como ajudar o filho e vive com mais tranquilidade
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -127,7 +182,7 @@
     <div class="passos-grid">
       <div class="passo">
         <div class="numero">1</div>
-        <h3>Avaliação inicial</h3>
+        <h3 class="textoVermelho">Avaliação inicial</h3>
         <p>
           O processo começa com encontros iniciais, onde é feita uma análise cuidadosa para compreender as dificuldades e necessidades da criança.
         </p>
@@ -135,7 +190,7 @@
 
       <div class="passo">
         <div class="numero">2</div>
-        <h3>Planejamento individualizado</h3>
+        <h3 class="textoVerde">Planejamento individualizado</h3>
         <p>
           A partir da avaliação, é elaborado um plano de intervenção personalizado, focado no que a criança realmente precisa.
         </p>
@@ -143,7 +198,7 @@
 
       <div class="passo">
         <div class="numero">3</div>
-        <h3>Acompanhamento psicopedagógico</h3>
+        <h3 class="textoVermelho">Acompanhamento psicopedagógico</h3>
         <p>
           Sessões regulares promovem o desenvolvimento das habilidades de aprendizagem, atenção, leitura, escrita e organização.
         </p>
@@ -151,7 +206,7 @@
 
       <div class="passo">
         <div class="numero">4</div>
-        <h3>Orientação para os pais</h3>
+        <h3 class="textoVerde">Orientação para os pais</h3>
         <p>
           Durante todo o processo, a família recebe apoio e orientações para ajudar a criança também em casa.
         </p>
@@ -213,7 +268,7 @@
     </div>
 
     <div class="sobre-imagem">
-      <img src="img/sobre-mim.png" alt="Mileid Lacerda">
+      <img src="img/imgMileid.jpeg" alt="Mileid Lacerda">
     </div>
   </div>
 </section>
@@ -254,43 +309,61 @@
 
     <div class="faq-lista">
       <details>
-        <summary>Como funciona a avaliação inicial?</summary>
-        <p>
-          Ela acontece nos primeiros encontros, até o 4º, onde analisamos o funcionamento
-          da criança para definir a melhor abordagem.
-        </p>
+        <summary class="faq-pergunta">Como funciona a avaliação inicial?</summary>
+        <div class="faq-resposta">
+          <p>
+            Ela acontece nos primeiros encontros, até o 4º, onde analisamos o funcionamento
+            da criança para definir a melhor abordagem.
+          </p>
+        </div>
       </details>
 
       <details>
-        <summary>Quantas sessões são necessárias por semana?</summary>
-        <p>
-          O ideal são 2 sessões semanais, mas isso pode ser ajustado conforme a necessidade da família.
-        </p>
+        <summary class="faq-pergunta">Quantas sessões são necessárias por semana?</summary>
+        <div class="faq-resposta">
+          <p>
+            O ideal são 2 sessões semanais, mas isso pode ser ajustado conforme a necessidade da família.
+          </p>
+        </div>
       </details>
 
       <details>
-        <summary>Qual a duração da sessão?</summary>
-        <p>
-          Cada sessão tem duração de 50 minutos.
-        </p>
+        <summary class="faq-pergunta">Qual a duração da sessão?</summary>
+        <div class="faq-resposta">
+          <p>
+            Cada sessão tem duração de 50 minutos.
+          </p>
+        </div>
       </details>
 
       <details>
-        <summary>Os pais participam do processo?</summary>
-        <p>
-          Sim. Você recebe orientações para ajudar seu filho também em casa.
-        </p>
+        <summary class="faq-pergunta">Os pais participam do processo?</summary>
+        <div class="faq-resposta">
+          <p>
+            Sim. Você recebe orientações para ajudar seu filho também em casa.
+          </p>
+        </div>
       </details>
 
       <details>
-        <summary>O atendimento pode ser online?</summary>
-        <p>
-          Sim, também realizo atendimento online.
-        </p>
+        <summary class="faq-pergunta">O atendimento pode ser online?</summary>
+        <div class="faq-resposta">
+          <p>
+            Sim, também realizo atendimento online.
+          </p>
+        </div>
       </details>
     </div>
   </div>
 </section>
+
+<a href="https://wa.me/5511921595542?text=Olá,%20vim%20pela%20página%20e%20gostaria%20de%20agendar%20uma%20avaliação%20psicopedagógica." 
+   class="whatsapp-float" 
+   target="_blank">
+
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+
+</a>
 
 <footer>
   <div class="container">
